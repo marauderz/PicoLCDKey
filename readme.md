@@ -2,6 +2,7 @@
 
 This here is a Circuit Python program which can be uses on a **Raspberry Pi Pico** and a **Waveshare Pico LCD** attached on it to create a simple shortcut key gadget, basically something that presses keys when one of the buttons are pressed.
 
+- Raspberry Pi Pico - https://www.raspberrypi.org/products/raspberry-pi-pico/
 - WaveShare Pico LCD - https://www.waveshare.com/pico-lcd-1.14.htm
 
 ## Dependent Libraries

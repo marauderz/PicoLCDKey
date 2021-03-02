@@ -1,0 +1,50 @@
+{
+    "buttons":[
+        {
+            "name":"Geforce Experience",
+            "color":"0x00ff00",
+            "key1":{
+                "keys":["ALT","F10"],                
+                "caption":"Clip Capture"
+            },
+            "key2":{
+                "keys":["ALT","F1"],
+                "caption":"Screen Shot"
+            },
+            "key3":{
+                "keys":["Alt","Z"],                
+                "caption":"Show Overlay"
+            }
+        },
+        {
+            "name":"Win10 Gamebar",
+            "color":"0x9114ff",
+            "key1":{
+                "keys":["ALT","G","GUI"],                
+                "caption":"Clip Capture"
+            },
+            "key2":{
+                "keys":["ALT","GUI","PRINT_SCREEN"],                
+                "caption":"Screen Shot"
+            },
+            "key3":{
+                "keys":["GUI","G"],                
+                "caption":"Show Overlay"
+            }
+        },
+        
+        {
+            "name":"Meeting Controls",
+            "color":"0xff6a00",
+            "key1":{
+                "keys":["CONTROL","SHIFT","M"],
+                "caption":"Teams Mute"
+            },
+            "key2":{
+                "keys":["CONTROL","M"],
+                "caption":"Skype Mute"
+            }
+        }
+    ]
+}
+

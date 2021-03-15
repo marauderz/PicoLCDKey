@@ -2,6 +2,7 @@ import json
 from CPButtonParser import parseButtons
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
+from adafruit_hid.consumer_control import ConsumerControl
 import time
 
 # model for the button dataset
@@ -21,7 +22,7 @@ class ButtonModel:
         
         #setup keyboard device
         self.keyboard=Keyboard(usb_hid.devices)
-
+        self.cc=ConsumerControl(usb_hid.devices)
 
     # Loads the button page specified by the index
     def LoadButtonPage(self,newButtonPageIndex):
@@ -44,8 +45,11 @@ class ButtonModel:
         button = self.currButtonDef.get(keyIndex,None)
         if button != None and button['keycodes'] != None:
             print(keyIndex + "pressed")
-            self.keyboard.send(*button['keycodes'])
-            time.sleep(150/1000)
+            if(button["isCC"])==False:                
+                self.keyboard.send(*button['keycodes'])
+                time.sleep(150/1000)
+            else:
+                self.cc.send(button["keycodes"][0])
         
     #Current Page Dictionary
     @property

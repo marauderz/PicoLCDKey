@@ -44,6 +44,25 @@
                 "keys":["CONTROL","M"],
                 "caption":"Skype Mute"
             }
+        },
+        {
+            "name":"Media Controls",
+            "color":"0xee0000",
+            "key1":{
+                "type":"cc",
+                "keys":["VOLUME_INCREMENT"],
+                "caption":"Vol UP"
+            },
+            "key2":{
+                "type":"cc",
+                "keys":["VOLUME_DECREMENT"],
+                "caption":"Vol DOWN"
+            },
+            "key3":{
+                "type":"cc",
+                "keys":["MUTE"],
+                "caption":"Mute"
+            }
         }
     ]
 }

@@ -25,6 +25,8 @@ Holding **key1** or **key3** on the LCD for 1 second will move between the pages
 
 The **buttons.json** file used to define the buttons is pretty self explanatory. Just note that the names for the keys needs to be the same as what you see here (https://github.com/adafruit/Adafruit_CircuitPython_HID/blob/master/adafruit_hid/keycode.py) 
 
+In order to access media controls (ie. Volume up, down, etc.). Make sure the button is defined with a **type="cc"** value. You can only have ONE keycode in a Consumer Control button, and use the keycodes from here (https://github.com/adafruit/Adafruit_CircuitPython_HID/blob/master/adafruit_hid/consumer_control_code.py)
+
 ## Final Notes
 This is my first real project with Python and Microcontrollers, so I'm gonna think the code isn't particularly pretty, most importantly the code for handling the actual buttons.
 

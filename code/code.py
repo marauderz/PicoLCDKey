@@ -76,7 +76,6 @@ def sysKeyAction(keyIndex):
     display.auto_refresh=True
     time.sleep(150/1000)
 
-
 while True:
     for key in dPins:
         pinRead=dPins[key]

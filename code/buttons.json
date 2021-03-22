@@ -21,7 +21,6 @@
         },
         {
             "name":"Geforce Experience",
-            "img":"gefx.bmp",
             "color":"0x00ff00",
             "key1":{
                 "keys":["ALT","F10"],                
@@ -38,7 +37,6 @@
         },
         {
             "name":"Win10 Gamebar",
-            "img":"xbox.bmp",
             "color":"0x9114ff",
             "key1":{
                 "keys":["ALT","G","GUI"],                
@@ -56,7 +54,6 @@
         
         {
             "name":"Meeting Controls",
-            "img":"mic.bmp",
             "color":"0xff6a00",
             "key1":{
                 "keys":["CONTROL","SHIFT","M"],

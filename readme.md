@@ -19,7 +19,9 @@ If you have all the hardware ready, you can just dump the contents of **dist** o
 
 Pressing the button on the screen will send the keypresses to the connected device. Note that the Key names start from 1 in the buttons.json file instead of 0... Because I was too lazy to change the code from it's Raspbery Pi incarnation. 😝
 
-Holding **key1** or **key3** on the LCD for 1 second will move between the pages of buttons.
+Holding **Key1** or **Key3** on the LCD for 1 second will move between the pages of buttons.
+
+Holding **Key0** on the LCD will bring you to a list of the button pages to make it easier to switch if you have a lot of buttons.Then Use **Key0** and **Key1** to move up and down the list, **Key2** and **Key3** to select the highlighted page.
 
 ## buttons.json
 

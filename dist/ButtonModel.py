@@ -5,6 +5,12 @@ from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.consumer_control import ConsumerControl
 import time
 
+sysKeyActions={
+    'key1':'showlist', #shows the list page
+    'key4':'flip', #Cycle to next page
+    'key2':'flipback' #Cycle to previous page
+}
+
 # model for the button dataset
 class ButtonModel:
     def __init__(self):
@@ -23,6 +29,9 @@ class ButtonModel:
         #setup keyboard device
         self.keyboard=Keyboard(usb_hid.devices)
         self.cc=ConsumerControl(usb_hid.devices)
+
+        #setup state variables
+        self.isPageListMode=False
 
     # Loads the button page specified by the index
     def LoadButtonPage(self,newButtonPageIndex):
@@ -50,7 +59,21 @@ class ButtonModel:
                 time.sleep(150/1000)
             else:
                 self.cc.send(button["keycodes"][0])
-        
+    
+    # Button was long pressed
+    def ButtonLongPressed(self,keyIndex):
+        sysaction=sysKeyActions[keyIndex]
+        print("Sys Key action :" + sysaction)
+        display.auto_refresh=False
+        if sysaction=='flip':
+            self.FlipButtonPage(1)
+            buttonUI.LoadButtonPage(buttonModel.CurrentButtons)
+        elif sysaction=='flipback':
+            self.FlipButtonPage(-1)
+            buttonUI.LoadButtonPage(buttonModel.CurrentButtons)
+        display.auto_refresh=True
+        time.sleep(150/1000)
+
     #Current Page Dictionary
     @property
     def CurrentButtons(self):
